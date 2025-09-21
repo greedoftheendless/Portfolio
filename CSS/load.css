@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "Gothic Joker";
+    src: url("../fonts/gothicjoker-gxxgp.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Base styles for a clean, centered, black and white look */
+body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    font-family: "Gothic Joker", sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Container to center the welcome text */
+.welcome-container {
+    text-align: center;
+}
+
+/* Styling for the welcome text with typing effect */
+#welcome-text {
+    font-size: clamp(2rem, 8vw, 6rem);
+    white-space: nowrap; /* Prevents the text from wrapping to a new line */
+    overflow: hidden;
+    /* The blinking cursor effect for the typing animation */
+    border-right: 0.1em solid #fff;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Keyframes for the blinking cursor */
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #fff;
+    }
+}
+
+/* Fade-out animation */
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
